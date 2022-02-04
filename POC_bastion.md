@@ -1,29 +1,58 @@
-# POC TheBastion
+# PoC TheBastion
 ```
-                                  |>>>
-                                  |
-                    |>>>      _  _|_  _         |>>>
-                    |        |;| |;| |;|        |
-                _  _|_  _    \\.    .  /    _  _|_  _
-               |;|_|;|_|;|    \\:. ,  /    |;|_|;|_|;|
-               \\..      /    ||;   . |    \\.    .  /
-                \\.  ,  /     ||:  .  |     \\:  .  /
-                 ||:   |_   _ ||_ . _ | _   _||:   |
-                 ||:  .|||_|;|_|;|_|;|_|;|_|;||:.  |
-                 ||:   ||.    .     .      . ||:  .|
-                 ||: . || .     . .   .  ,   ||:   |       \,/
-                 ||:   ||:  ,  _______   .   ||: , |            /`\
-                 ||:   || .   /+++++++\    . ||:   |
-                 ||:   ||.    |+++++++| .    ||: . |
-              __ ||: . ||: ,  |+++++++|.  . _||_   |
-     ____--`~    '--~~__|.    |+++++__|----~    ~`---,              ___
--~--~                   ~---__|,--~'                  ~~----_____-~'   `~----~~
+                                o
+                            .-'"|
+                            |-'"|
+                                |   _.-'`.
+                               _|-"'_.-'|.`.
+                              |:^.-'_.-'`.;.`.
+                              | `.'.   ,-'_.-'|
+                              |   + '-'.-'   J
+           __.            .d88|    `.-'      |
+      _.--'_..`.    .d88888888|     |       J'b.
+   +:" ,--'_.|`.`.d88888888888|-.   |    _-.|888b.
+   | \ \-'_.--'_.-+888888888+'  _>F F +:'   `88888bo.
+    L \ +'_.--'   |88888+"'  _.' J J J  `.    +8888888b.
+    |  `+'        |8+"'  _.-'    | | |    +    `+8888888._-'.
+  .d8L  L         J  _.-'        | | |     `.    `+888+^'.-|.`.
+ d888|  |         J-'            F F F       `.  _.-"_.-'_.+.`.`.
+d88888L  L     _.  L            J J J          `|. +'_.-'    `_+ `;
+888888J  |  +-'  \ L         _.-+.|.+.          F `.`.     .-'_.-"J
+8888888|  L L\    \|     _.-'     '   `.       J    `.`.,-'.-"    |
+8888888PL | | \    `._.-'               `.     |      `..-"      J.b
+8888888 |  L L `.    \     _.-+.          `.   L+`.     |        F88b
+8888888  L | |   \   _..--'_.-|.`.          >-'    `., J        |8888b
+8888888  |  L L   +:" _.--'_.-'.`.`.    _.-'     .-' | |       JY88888b
+8888888   L | |   J \ \_.-'     `.`.`.-'     _.-'   J J        F Y88888b
+Y888888    \ L L   L \ `.      _.-'_.-+  _.-'       | |       |   Y88888b
+`888888b    \| |   |  `. \ _.-'_.-'   |-'          J J       J     Y88888b
+ Y888888     +'\   J    \ '_.-'       F    ,-T"\   | |    .-'      )888888
+  Y88888b.      \   L    +'          J    /  | J  J J  .-'        .d888888
+   Y888888b      \  |    |           |    F  '.|.-'+|-'         .d88888888
+    Y888888b      \ J    |           F   J    -.              .od88888888P
+     Y888888b      \ L   |          J    | .' ` \d8888888888888888888888P
+      Y888888b      \|   |          |  .-'`.  `\ `.88888888888888888888P
+       Y888888b.     J   |          F-'     \\ ` \ \88888888888888888P'
+        Y8888888b     L  |         J       d8`.`\  \`.8888888888888P'
+         Y8888888b    |  |        .+      d8888\  ` .'  `Y888888P'
+         `88888888b   J  |     .-'     .od888888\.-'
+          Y88888888b   \ |  .-'     d888888888P'
+          `888888888b   \|-'       d888888888P
+           `Y88888888b            d8888888P'
+             Y88888888bo.      .od88888888   hs
+             `8888888888888888888888888888
+              Y88888888888888888888888888P
+               `Y8888888888888888888888P'
+                 `Y8888888888888P'
+                      `Y88888P'
 ```
-Ce PoC est basé sur l'image docker publique [ovhcom/the-bastion:sandbox](https://hub.docker.com/r/ovhcom/the-bastion),
-Cette image n'as pas pour vocation d'être utiliser en production, il est préférable de se baser sur les fichiers [Dockerfile](https://github.com/ovh/the-bastion/tree/master/docker) fournis par le projets et de les adapter au besoins.
+Ce PoC est basé sur l'image docker publique d'OVH.
+
+Cette image n'as pas pour vocation d'être utiliser en production, 
+il est préférable de se baser sur les fichiers [Dockerfile](https://github.com/ovh/the-bastion/tree/master/docker) fournis par le projets et de les adapter au besoins.
 
 ## Prérequis : 
-- Docker (swarm activé)
+- [Docker (swarm activé)](https://docs.docker.com/engine/swarm/swarm-mode/)
 - [ovhcom/the-bastion:sandbox](https://hub.docker.com/r/ovhcom/the-bastion)
 - [panubo/sshd:latest](https://hub.docker.com/r/panubo/sshd)
 
