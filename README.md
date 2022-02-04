@@ -114,9 +114,9 @@ Aussi le bastion d'administration reste une solution de sécurité pérène pour
 - [X] Support Geolocalisation
 - [ ] Support Inter-entreprise (multiple trust/interco)²
 
-¹ Version payante
+_¹ Version payante_
 
-² Non définis ou non applicable 
+_² Non définis ou non applicable_
 
 #### Pros : 
 - Intégration native avec les autres produits RCDev.
@@ -168,9 +168,9 @@ Aussi le bastion d'administration reste une solution de sécurité pérène pour
 - [ ] Support Geolocalisation¹
 - [X] Support Inter-entreprise (multiple trust/interco)
 
-¹ Un greffons peu eventuellement rajouter cette fonctionnalité
+_¹ Un greffons peu eventuellement rajouter cette fonctionnalité_
 
-² Le DAC avec groupes (tel qu'implémenté dans les systèmes de fichiers POSIX) se rapproche au niveau fonctionnel d'un RBAC.
+_² Le DAC avec groupes (tel qu'implémenté dans les systèmes de fichiers POSIX) se rapproche au niveau fonctionnel d'un RBAC._
 #### Pros :
 - Prix : Gratuit (en dehors des ressources alloués)
 - Source ouverte : Auditable et extensible.
@@ -209,7 +209,7 @@ docker stack ls
 docker service ls
 ```
 Création du compte d'administration sur le master :
-Notes : Dans cet exemple mon fichier `~/.ssh/config` est déjà parametrer pour utiliser la clefs privé qui vas avec la clefs publique à fournir au script `setup-first-admin-account.sh`.
+_Notes : Dans cet exemple mon fichier `~/.ssh/config` est déjà parametré pour utiliser la clefs privé qui vas avec la clefs publique à fournir au script `setup-first-admin-account.sh`._
 ```sh
 docker exec -it $(docker ps |grep bastion_master |awk '{print $1}') /opt/bastion/bin/admin/setup-first-admin-account.sh admin auto
 alias bastion="ssh admin@127.0.0.1 -tp 2222 -- "
@@ -252,3 +252,11 @@ Il est possible d'utiliser le bastion en mode interactif avec les commandes :
 `bastion` et `bastion -i` pour profiter de la completion automatique (et ne plus taper --osh).
 
 Une aide détaillé est accèssible avec la commande `help`.
+
+### Teleport (Gravitational)
+[Teleport](https://github.com/gravitational/teleport) est un bastion modulaire moderne multiprotocoles.
+
+#### Références : 
+1. [Documentation](https://goteleport.com/docs/)
+2. [How it work](https://goteleport.com/how-it-works/)
+3. [Demo Video](https://www.youtube.com/watch?v=b1WHFW0NIoM)
