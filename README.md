@@ -189,69 +189,8 @@ _² Le DAC avec groupes (tel qu'implémenté dans les systèmes de fichiers POSI
 4. [Article Bastion part 3 : Security at the core](https://blog.ovhcloud.com/the-bastion-part-3-security-at-the-core/)
 5. [Article Bastion part 4 : A new era](https://blog.ovhcloud.com/the-bastion-part-4-a-new-era/)
 
-#### PoC
-
-Ce PoC est basé sur l'image docker publique [ovhcom/the-bastion:sandbox](https://hub.docker.com/r/ovhcom/the-bastion),
-Cette image n'as pas pour vocation d'être utiliser en production, il est préférable de se baser sur les fichiers [Dockerfile](https://github.com/ovh/the-bastion/tree/master/docker) fournis par le projets et de les adapter au besoins.
-
-Création des réseaux :
-```sh
-docker network create bastion --scope swarm --driver overlay --internal
-docker network create net1 --scope swarm --driver overlay --internal
-docker network create net2 --scope swarm --driver overlay --internal
-docker network create net3 --scope swarm --driver overlay --internal
-docker network ls
-```
-Déploiement de la stack bastion :
-```sh
-docker stack deploy -c bastion/docker-compose.yml bastion
-docker stack ls
-docker service ls
-```
-Création du compte d'administration sur le master :
-_Notes : Dans cet exemple mon fichier `~/.ssh/config` est déjà parametré pour utiliser la clefs privé qui vas avec la clefs publique à fournir au script `setup-first-admin-account.sh`._
-```sh
-docker exec -it $(docker ps |grep bastion_master |awk '{print $1}') /opt/bastion/bin/admin/setup-first-admin-account.sh admin auto
-alias bastion="ssh admin@127.0.0.1 -tp 2222 -- "
-bastion --osh info
-```
-Listing de la clefs publique de sortie  pour l'utilisateur admin dans la configuration des instances de la stack server :
-```sh
-bastion --osh selfListEgressKeys
-```
-Copie de la directive authorized_keys dans le fichier `server\admin`
-Deploiement de la stack server:
-```sh
-docker stack deploy -c ssh/docker-compose.yml ssh
-docker stack ls
-docker service ls
-```
-Création des accès sur le bastion
-```sh
-for i in {1..3};do bastion --osh selfAddPersonalAccess --host $(docker inspect -f '{{ range.NetworkSettings.Networks }}{{.IPAddress}}{{end}}' $(docker ps |grep ssh_server$i |awk '{print $1}')) --port 22 --user admin; done
-```
-Vérification :
-```sh
-bastion --osh selfListAccesses
-```
-Connection à au serveur 1 :
-```sh
-bastion admin@$(docker inspect -f '{{ range.NetworkSettings.Networks }}{{.IPAddress}}{{end}}' $(docker ps |grep ssh_server1 |awk '{print $1}'))
-```
-Listing des sessions SSH enregitrée ou en cours avec détails
-```sh
-bastion --osh selfListSessions --type ssh --detailed
-```
-Rejouer la une session ssh :
-```sh
-bastion --osh selfPlaySession --id xxxxxxxxxxxx
-```
-
-Il est possible d'utiliser le bastion en mode interactif avec les commandes : 
-
-`bastion` et `bastion -i` pour profiter de la completion automatique (et ne plus taper --osh).
-
-Une aide détaillé est accèssible avec la commande `help`.
+#### PoC :
+[PoC TheBAstion](POC_bastion.md)
 
 ### Teleport (Gravitational)
 [Teleport](https://github.com/gravitational/teleport) est un bastion modulaire moderne multiprotocoles.
