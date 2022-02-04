@@ -74,6 +74,7 @@ index 1d1149f..3a68d6d 100644
      sed -i -re 's=system\(\);=unix-stream("/dev/log");=' /etc/syslog-ng/syslog-ng.conf && \
      # accountUidMax & ttyrecGroupIdOffset change: fixes https://github.com/ovh/the-bastion/issues/24 \
 ```
+_Il est donc nécéssaire d'éditer le fichier [bastion/docker-compose.yml](bastion/docker-compose.yml) pour changer l'image._
 
 ## Mise en oeuvre :
 1. Création des réseaux :
@@ -101,7 +102,7 @@ bastion --osh info
 ```sh
 bastion --osh selfListEgressKeys
 ```
-5. Copie de la directive authorized_keys dans le fichier `ssh\admin`
+5. Copie de la directive `authorized_keys` dans le fichier [ssh\admin](ssh/admin)
 6. Deploiement de la stack server:
 ```sh
 docker stack deploy -c ssh/docker-compose.yml ssh
@@ -110,7 +111,10 @@ docker service ls
 ```
 7. Création des accès sur le bastion
 ```sh
-for i in {1..3};do bastion --osh selfAddPersonalAccess --host $(docker inspect -f '{{ range.NetworkSettings.Networks }}{{.IPAddress}}{{end}}' $(docker ps |grep ssh_server$i |awk '{print $1}')) --port 22 --user admin; done
+for i in {1..3};do \
+  bastion --osh selfAddPersonalAccess --host $(docker inspect -f '{{ range.NetworkSettings.Networks }}{{.IPAddress}}{{end}}' \
+  $(docker ps |grep ssh_server$i |awk '{print $1}')) --port 22 --user admin; \
+done
 ```
 8. Vérification :
 ```sh
