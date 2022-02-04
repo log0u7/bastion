@@ -34,7 +34,7 @@ ou bien d'un reverse-proxy (Traefik/HAProxy) pour les connexions entrantes vers 
 Le bastion est le mandataire de confiance, le point d'entrée unique pour l'administration des infrastructures offrant visibilité et tracabilité sur les evénements qui y occurent.
 
 [![shemas bastion](https://ikigai.business/wp-content/uploads/2020/08/Bastion-schema-principe-1024x707.png.webp)](https://ikigai.business/cest-quoi-un-bastion/)
-_Source de l'image: "ikigai.business : C'est quoi un bastion ?" avec présentation de Wallix.
+_Source de l'image: "ikigai.business : C'est quoi un bastion ?" avec présentation de Wallix._
 
 ## Pour quel usage ?
 Afin de suivre les recomandations de la majorité des organismes produisant des référentiels sur la sécurité des systèmes d'information. 
@@ -100,7 +100,7 @@ Aussi le bastion d'administration reste une solution de sécurité pérène pour
 - [X] Verouillage des sessions inactives
 - [X] Enregistrement des sessions interactive
 - [ ] Enregistrement des sessions non-interactive²
- 
+#### 
 - [ ] Support RBAC²
 - [ ] Support SSHFP²
 - [X] Support SCP/SFTP
@@ -156,7 +156,7 @@ _² Non définis ou non applicable_
 - [X] Verouillage des sessions inactives
 - [X] Enregistrement des sessions intéractives
 - [X] Enregistrement des sessions non-intéractives
-
+#### 
 - [X] Support RBAC²
 - [X] Support SSHFP
 - [X] Support SCP/SFTP
@@ -197,7 +197,7 @@ _² Le DAC avec groupes (tel qu'implémenté dans les systèmes de fichiers POSI
 5. [Article Bastion part 4 : A new era](https://blog.ovhcloud.com/the-bastion-part-4-a-new-era/)
 
 #### PoC :
-[PoC TheBAstion](POC_bastion.md)
+[PoC TheBAstion](POC_thebastion.md)
 
 ---
 
@@ -217,7 +217,7 @@ _² Le DAC avec groupes (tel qu'implémenté dans les systèmes de fichiers POSI
 - [ ] Verouillage des sessions inactives¹
 - [X] Enregistrement des sessions intéractives
 - [ ] Enregistrement des sessions non-intéractives¹
----
+#### 
 - [X] Support RBAC
 - [ ] Support SSHFP¹
 - [X] Support SCP/SFTP
