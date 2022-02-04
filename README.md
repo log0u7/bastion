@@ -193,7 +193,43 @@ _² Le DAC avec groupes (tel qu'implémenté dans les systèmes de fichiers POSI
 [PoC TheBAstion](POC_bastion.md)
 
 ### Teleport (Gravitational)
-[Teleport](https://github.com/gravitational/teleport) est un bastion modulaire moderne multiprotocoles.
+[Teleport](https://github.com/gravitational/teleport) est un proxy multiprotocoles modulaire.
+
+- [X] Point d'entré unique
+- [X] Haute Disponibilité
+- [X] Adaptabilité
+- [X] Compatibilité
+- [X] Tracabilité
+- [X] Auditabilité
+- [X] Gestion des accès
+- [X] Délégation
+- [ ] Verouillage des sessions inactives¹
+- [X] Enregistrement des sessions intéractives
+- [ ] Enregistrement des sessions non-intéractives¹
+---
+- [X] Support RBAC
+- [ ] Support SSHFP
+- [X] Support SCP/SFTP
+- [ ] Support MOSH
+- [X] Support SuDo
+- [X] Support Ansible
+- [ ] Support PortKnocking/SPA
+- [X] Support LDAP/AD
+- [X] Support Proxy HTTPS
+- [X] Support SIEM
+- [X] Support PKI 
+- [X] Support MFA/OTP
+- [ ] Support Push¹
+- [ ] Support PIV
+- [ ] Support HSM¹
+- [X] Support Geolocalisation
+- [X] Support Inter-entreprise (multiple trust/interco)
+
+_¹ Non définis ou non applicable_
+
+#### Pros :
+
+#### Cons :
 
 #### Références : 
 1. [Documentation](https://goteleport.com/docs/)
