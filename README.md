@@ -208,19 +208,19 @@ _² Le DAC avec groupes (tel qu'implémenté dans les systèmes de fichiers POSI
 - [ ] Enregistrement des sessions non-intéractives¹
 ---
 - [X] Support RBAC
-- [ ] Support SSHFP
+- [ ] Support SSHFP¹
 - [X] Support SCP/SFTP
 - [ ] Support MOSH
 - [X] Support SuDo
 - [X] Support Ansible
-- [ ] Support PortKnocking/SPA
+- [ ] Support PortKnocking/SPA¹
 - [X] Support LDAP/AD
 - [X] Support Proxy HTTPS
 - [X] Support SIEM
 - [X] Support PKI 
 - [X] Support MFA/OTP
 - [ ] Support Push¹
-- [ ] Support PIV
+- [X] Support PIV
 - [ ] Support HSM¹
 - [X] Support Geolocalisation
 - [X] Support Inter-entreprise (multiple trust/interco)
@@ -234,4 +234,6 @@ _¹ Non définis ou non applicable_
 #### Références : 
 1. [Documentation](https://goteleport.com/docs/)
 2. [How it work](https://goteleport.com/how-it-works/)
-3. [Demo Video](https://www.youtube.com/watch?v=b1WHFW0NIoM)
+3. [Architecture Overview](https://goteleport.com/docs/architecture/overview/)
+4. [Demo Video](https://www.youtube.com/watch?v=b1WHFW0NIoM)
+
