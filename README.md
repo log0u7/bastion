@@ -34,7 +34,7 @@ ou bien d'un reverse-proxy (Traefik/HAProxy) pour les connexions entrantes vers 
 Le bastion est le mandataire de confiance, le point d'entrée unique pour l'administration des infrastructures offrant visibilité et tracabilité sur les evénements qui y occurent.
 
 [![shemas bastion](https://ikigai.business/wp-content/uploads/2020/08/Bastion-schema-principe-1024x707.png.webp)](https://ikigai.business/cest-quoi-un-bastion/)
-_Source: ikigai business presentation wallix._
+_Source de l'image: "ikigai.business : C'est quoi un bastion ?" avec présentation de Wallix.
 
 ## Pour quel usage ?
 Afin de suivre les recomandations de la majorité des organismes produisant des référentiels sur la sécurité des systèmes d'information. 
