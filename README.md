@@ -33,6 +33,9 @@ A l'instar d'un proxy-cache authentifiant (Squid + auth LDAP/AD pour les users, 
 ou bien d'un reverse-proxy (Traefik/HAProxy) pour les connexions entrantes vers nos services. 
 Le bastion est le mandataire de confiance, le point d'entrée unique pour l'administration des infrastructures offrant visibilité et tracabilité sur les evénements qui y occurent.
 
+[![shemas bastion](https://ikigai.business/wp-content/uploads/2020/08/Bastion-schema-principe-1024x707.png.webp)](https://ikigai.business/cest-quoi-un-bastion/)
+_Source: ikigai business presentation wallix._
+
 ## Pour quel usage ?
 Afin de suivre les recomandations de la majorité des organismes produisant des référentiels sur la sécurité des systèmes d'information. 
 
@@ -83,6 +86,8 @@ Aussi le bastion d'administration reste une solution de sécurité pérène pour
 
 ### SpanKey¹ (RCDevs) :
 [SpanKey](https://www.rcdevs.com/products/spankey/) n'est pas un bastion mais un service client/serveur de gestion des clefs SSH centralisé.
+
+[![Schéma Spankey](https://z5k6a6b2.rocketcdn.me/wp-content/uploads/2019/08/spankey_architecture_schema_white.png.webp)](https://www.rcdevs.com/products/spankey/#1551685627585-705199c1-7e34155168998901715516901220271562599540024)
 
 - [ ] Point d'entré unique²
 - [X] Haute Disponibilité
@@ -194,6 +199,8 @@ _² Le DAC avec groupes (tel qu'implémenté dans les systèmes de fichiers POSI
 
 ### Teleport (Gravitational)
 [Teleport](https://github.com/gravitational/teleport) est un proxy multiprotocoles modulaire.
+
+[![Schéma Téléport](https://goteleport.com/_next/image/?url=%2F_next%2Fstatic%2Fmedia%2Feverything.8c597168.svg&w=1080&q=75)](https://goteleport.com/docs/architecture/overview/)
 
 - [X] Point d'entré unique
 - [X] Haute Disponibilité
