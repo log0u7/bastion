@@ -78,5 +78,7 @@ NOTE: Make sure proxy.luna.teleport:443 points at a Teleport proxy which users c
 ```
 Il ne reste qu'a ouvrir cette url dans votre navigateur.
 
-_Note : Avec Chrome il faut utiliser l'argument `--ignore-certificate-errors`._
+_Note : 
+ - Avec Chrome il faut utiliser l'argument `--ignore-certificate-errors`._
+ - Il est nécéssaire de faire pointer `proxy.luna.teleport` sur localhost.
 
