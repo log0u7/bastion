@@ -1,0 +1,102 @@
+version: '3.3'
+
+services:
+    server1:
+        image: panubo/sshd:latest
+        deploy:
+            placement:
+                constraints:
+                    - node.role == manager
+        configs:
+            - source: server
+              target: /etc/authorized_keys/admin
+              uid: "1000"
+              gid: "1000"
+              mode: 0400
+        environment:
+            SSH_USERS: "admin:1000:1000:/bin/bash"
+        #    SSH_ENABLE_PASSWORD_AUTH: "false"
+        #    SSH_ENABLE_ROOT: "false"
+        #    SSH_ENABLE_ROOT_PASSWORD_AUTH: "false"
+        #    MOTD: "Server 1"
+        #    DISABLE_SFTP: "false"
+        #    TCP_FORWARDING: "false"    
+        #    GATEWAY_PORT: "false"
+        #    SFTP_MODE: "false"
+        #    SFTP_CHROOT: "/opt"
+        #    SCP_MODE: "false"
+        #    RSYNC_MODE: "false"    
+        networks:
+            - net1
+    server2:
+        image: panubo/sshd:latest
+        deploy:
+            placement:
+                constraints:
+                    - node.role == manager
+        configs:
+            - source: server
+              target: /etc/authorized_keys/admin
+              uid: "1000"
+              gid: "1000"
+              mode: 0400
+        environment:
+            SSH_USERS: "admin:1000:1000:/bin/bash"
+        #    SSH_ENABLE_PASSWORD_AUTH: "false"
+        #    SSH_ENABLE_ROOT: "false"
+        #    SSH_ENABLE_ROOT_PASSWORD_AUTH: "false"
+        #    MOTD: "Server 1"
+        #    DISABLE_SFTP: "false"
+        #    TCP_FORWARDING: "false"    
+        #    GATEWAY_PORT: "false"
+        #    SFTP_MODE: "false"
+        #    SFTP_CHROOT: "/opt"
+        #    SCP_MODE: "false"
+        #    RSYNC_MODE: "false"    
+        networks:
+            - net2
+    server3:
+        image: panubo/sshd:latest
+        deploy:
+            placement:
+                constraints:
+                    - node.role == manager
+        configs:
+            - source: server
+              target: /etc/authorized_keys/admin
+              uid: "1000"
+              gid: "1000"
+              mode: 0400
+        environment:
+            SSH_USERS: "admin:1000:1000:/bin/bash"
+        #    SSH_ENABLE_PASSWORD_AUTH: "false"
+        #    SSH_ENABLE_ROOT: "false"
+        #    SSH_ENABLE_ROOT_PASSWORD_AUTH: "false"
+        #    MOTD: "Server 1"
+        #    DISABLE_SFTP: "false"
+        #    TCP_FORWARDING: "false"    
+        #    GATEWAY_PORT: "false"
+        #    SFTP_MODE: "false"
+        #    SFTP_CHROOT: "/opt"
+        #    SCP_MODE: "false"
+        #    RSYNC_MODE: "false"    
+        networks:
+            - net3
+
+networks:
+    bastion:
+        external:
+            name: bastion
+    net1:
+        external:
+            name: net1
+    net2:
+        external:
+            name: net2
+    net3:
+        external:
+            name: net3
+
+configs:
+    server:
+        file: ./admin

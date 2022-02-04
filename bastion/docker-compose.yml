@@ -1,0 +1,42 @@
+version: '3.3'
+
+services:
+    master:
+        #image: ovhcom/the-bastion:sandbox
+        image: localhost:5000/bastion:latest
+        deploy:
+            mode: global
+            placement:
+                constraints:
+                    - node.role == manager
+                      #            configs:
+                      #                - source: bastion
+                      #                  target: /etc/bastion/bastion.conf
+                      #                  uid: "0"
+                      #                  gid: "0"
+                      #                  mode: 0640
+        ports:
+            - "2222:22"
+        networks:
+            - bastion
+            - net1
+            - net2
+            - net3
+
+networks:
+    bastion:
+        external:
+            name: bastion
+    net1:
+        external:
+            name: net1
+    net2:
+        external:
+            name: net2
+    net3:
+        external:
+            name: net3
+
+            #configs:
+            #    bastion:
+            #        file: ./bastion/bastion.conf
