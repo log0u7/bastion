@@ -100,7 +100,7 @@ Aussi le bastion d'administration reste une solution de sécurité pérène pour
 - [X] Verouillage des sessions inactives
 - [X] Enregistrement des sessions interactive
 - [ ] Enregistrement des sessions non-interactive²
---- 
+ 
 - [ ] Support RBAC²
 - [ ] Support SSHFP²
 - [X] Support SCP/SFTP
@@ -140,6 +140,8 @@ _² Non définis ou non applicable_
 4. [Spankey Architecture](https://www.rcdevs.com/products/spankey/#1551685627585-705199c1-7e34155168998901715516901220271562599540024)
 5. [Spankey HowTo](https://www.rcdevs.com/products/spankey/#1551685627585-705199c1-7e34155168998901715516901220271562599540024)
 
+---
+
 ### TheBastion (OVH) :
 [TheBastion](https://github.com/ovh/the-bastion) est un bastion OpenSSH devellopé en "interne" par OVH puis rendus publique (Q4 2020).
 
@@ -154,7 +156,7 @@ _² Non définis ou non applicable_
 - [X] Verouillage des sessions inactives
 - [X] Enregistrement des sessions intéractives
 - [X] Enregistrement des sessions non-intéractives
----
+
 - [X] Support RBAC²
 - [X] Support SSHFP
 - [X] Support SCP/SFTP
@@ -196,6 +198,8 @@ _² Le DAC avec groupes (tel qu'implémenté dans les systèmes de fichiers POSI
 
 #### PoC :
 [PoC TheBAstion](POC_bastion.md)
+
+---
 
 ### Teleport (Gravitational)
 [Teleport](https://github.com/gravitational/teleport) est un proxy multiprotocoles modulaire.
@@ -244,3 +248,4 @@ _¹ Non définis ou non applicable_
 3. [Architecture Overview](https://goteleport.com/docs/architecture/overview/)
 4. [Demo Video](https://www.youtube.com/watch?v=b1WHFW0NIoM)
 
+---
