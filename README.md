@@ -139,6 +139,7 @@ _² Non définis ou non applicable_
 3. [Spankey Features](https://www.rcdevs.com/products/spankey/#1551685627571-e7270aee-8361155168998901715516901220271562599540024)
 4. [Spankey Architecture](https://www.rcdevs.com/products/spankey/#1551685627585-705199c1-7e34155168998901715516901220271562599540024)
 5. [Spankey HowTo](https://www.rcdevs.com/products/spankey/#1551685627585-705199c1-7e34155168998901715516901220271562599540024)
+6. [Spankey Pricing](https://www.rcdevs.com/product/spankey-enterprise-license-and-maintenance/)
 
 ---
 
@@ -247,6 +248,7 @@ _¹ Non définis ou non applicable_
 2. [How it work](https://goteleport.com/how-it-works/)
 3. [Architecture Overview](https://goteleport.com/docs/architecture/overview/)
 4. [Demo Video](https://www.youtube.com/watch?v=b1WHFW0NIoM)
+5. [Teleport Pricing](https://goteleport.com/pricing/)
 
 #### PoC :
 [PoC Teleport](POC_teleport.md)
