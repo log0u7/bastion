@@ -131,7 +131,7 @@ _² Non définis ou non applicable_
 - Prix : €3,30 par agent par mois pour 100 serveurs (en plus des ressources alloués).
 - Sources fermés : Auditabilité du code serveur et agent impossible.
 - Compatibilité réduite : Agent seulement compatible avec les distribution Linux basées RedHat ou Debian.
-- Architecture Client/Serveurs : Augmentation de la surface d'attaques des hôtes via l'installation d'un agent.
+- Architecture Client/Serveur : Augmentation de la surface d'attaques des hôtes via l'installation d'un agent.
 
 #### Références : 
 1. [Documentation](https://www.rcdevs.com/docs/)
@@ -184,7 +184,8 @@ _² Le DAC avec groupes (tel qu'implémenté dans les systèmes de fichiers POSI
 - Source ouverte : Auditable et extensible.
 - Compatibilité : le serveur s'installe sur n'importe quel systemes BSD/Linux (OpenSSH + Perl) et sécurise n'importe quel hôte faisant tourner un serveur ssh ou telnet.
 - Durcissment : La solution est basée sur le durcissement de l'OS conforme au PCI-DSS ([debian-CIS](https://github.com/ovh/debian-cis)) et propose des template pour le durcissement du serveur SSH.
-- Fiabilité : Ce logiciel est exploité en production depuis plusieurs annéés dans de nombreux environements certifiés  PCI-DSS, ISO27001, SOC 1&2. 
+- Fiabilité : Ce logiciel est exploité en production depuis plusieurs annéés dans de nombreux environements certifiés  PCI-DSS, ISO27001, SOC 1&2.
+- Mise à l'échelle : Cette solution est simple à mettre à l'échelle.
 
 #### Cons :
 - Absence de support technique de l'éditeur.
@@ -203,7 +204,7 @@ _² Le DAC avec groupes (tel qu'implémenté dans les systèmes de fichiers POSI
 ---
 
 ### Teleport (Gravitational)
-[Teleport](https://github.com/gravitational/teleport) est un proxy multiprotocoles modulaire.
+[Teleport](https://github.com/gravitational/teleport) est un proxy multiprotocoles modulaire (pour résumé).
 
 [![Schéma Téléport](https://goteleport.com/_next/image/?url=%2F_next%2Fstatic%2Fmedia%2Feverything.8c597168.svg&w=1080&q=75)](https://goteleport.com/docs/architecture/overview/)
 
@@ -240,8 +241,12 @@ _² Le DAC avec groupes (tel qu'implémenté dans les systèmes de fichiers POSI
 _¹ Non définis ou non applicable_
 
 #### Pros :
+- Multi-protocoles : SSH, HTTPS, RDP, Kubernetes API, MySQL, MongoDB et PostgreSQL
+- Support technique auprès de l'éditeur.
+- Mise à l'échelle : Cette solution est simple à mettre à l'échelle.
 
 #### Cons :
+- Architecture Client/Serveur: Augmentation de la surface d'attaques des hôtes via l'installation d'un agent.
 
 #### Références : 
 1. [Documentation](https://goteleport.com/docs/)
