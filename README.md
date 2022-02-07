@@ -33,8 +33,8 @@ A l'instar d'un proxy-cache authentifiant (Squid + auth LDAP/AD pour les users, 
 ou bien d'un reverse-proxy (Traefik/HAProxy) pour les connexions entrantes vers nos services. 
 Le bastion est le mandataire de confiance, le point d'entrée unique pour l'administration des infrastructures offrant visibilité et tracabilité sur les evénements qui y occurent.
 
-[![shemas bastion](https://ikigai.business/wp-content/uploads/2020/08/Bastion-schema-principe-1024x707.png.webp)](https://ikigai.business/cest-quoi-un-bastion/)
-_Source de l'image: "ikigai.business : C'est quoi un bastion ?" avec présentation de Wallix._
+[![shemas bastion](https://blog.octo.com/wp-content/uploads/2018/01/a-principes-de-base-1-1024x771.png)](https://blog.octo.com/le-bastion-ssh/)
+_Source de l'image: "blog octo : le bastion ssh"_
 
 ## Pour quel usage ?
 Afin de suivre les recomandations de la majorité des organismes produisant des référentiels sur la sécurité des systèmes d'information. 
