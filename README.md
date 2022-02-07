@@ -29,13 +29,12 @@ c'est un élément clef de la sécurité périmétrique de l'entreprise qui rép
 - Gestion des droits d'accès : utilisateurs, groupes et périmètre d'action.
 - Gestion de la légitimité et tracabilité d'une connexion externe ou interne à l'entreprise.
 
-A l'instar d'un proxy-cache authentifiant (Squid + auth LDAP/AD pour les users, auth basic pour les serveurs) pour les connexions vers l'exterieur, 
-ou bien d'un reverse-proxy (Traefik/HAProxy) pour les connexions entrantes vers nos services. 
+A l'instar d'un proxy-cache authentifiant pour les connexions vers l'exterieur, ou bien d'un reverse-proxy pour les connexions entrantes vers nos services. 
 Le bastion est le mandataire de confiance, le point d'entrée unique pour l'administration des infrastructures offrant visibilité et tracabilité sur les evénements qui y occurent.
 
 [![shemas bastion](https://www.exoscale.com/static/syslog/2016-01-15-secure-your-cloud-computing-architecture-with-a-bastion/bastion-security-groups-example.svg)](https://www.exoscale.com/syslog/secure-your-cloud-computing-architecture-with-a-bastion/)
 
-_Source de l'image: "www.exoscale.com : secure your cloud computing architect w/ a bastion"_
+_Source de l'image: "www.exoscale.com : secure your cloud computing architecture w/ a bastion"_
 
 ## Pour quel usage ?
 Afin de suivre les recomandations de la majorité des organismes produisant des référentiels sur la sécurité des systèmes d'information. 
