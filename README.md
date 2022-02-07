@@ -34,6 +34,7 @@ ou bien d'un reverse-proxy (Traefik/HAProxy) pour les connexions entrantes vers 
 Le bastion est le mandataire de confiance, le point d'entrée unique pour l'administration des infrastructures offrant visibilité et tracabilité sur les evénements qui y occurent.
 
 [![shemas bastion](https://www.exoscale.com/static/syslog/2016-01-15-secure-your-cloud-computing-architecture-with-a-bastion/bastion-security-groups-example.svg)](https://www.exoscale.com/syslog/secure-your-cloud-computing-architecture-with-a-bastion/)
+
 _Source de l'image: "www.exoscale.com : secure your cloud computing architect w/ a bastion"_
 
 ## Pour quel usage ?
