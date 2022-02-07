@@ -204,7 +204,7 @@ _² Le DAC avec groupes (tel qu'implémenté dans les systèmes de fichiers POSI
 ---
 
 ### Teleport (Gravitational)
-[Teleport](https://github.com/gravitational/teleport) est un proxy multiprotocoles modulaire (pour résumé).
+[Teleport](https://github.com/gravitational/teleport) est un proxy multiprotocoles modulaire moderne (pour résumé).
 
 [![Schéma Téléport](https://goteleport.com/_next/image/?url=%2F_next%2Fstatic%2Fmedia%2Feverything.8c597168.svg&w=1080&q=75)](https://goteleport.com/docs/architecture/overview/)
 
@@ -241,8 +241,10 @@ _² Le DAC avec groupes (tel qu'implémenté dans les systèmes de fichiers POSI
 _¹ Non définis ou non applicable_
 
 #### Pros :
+- Prix : Gratuit (en dehors de la version entreprise et des ressources alloués)
 - Multi-protocoles : SSH, HTTPS, RDP, Kubernetes API, MySQL, MongoDB et PostgreSQL
-- Support technique auprès de l'éditeur.
+- Source ouverte : Auditable et extensible.
+- Support technique auprès de l'éditeur (support communautaire en version oss et support payant en version entreprise).
 - Mise à l'échelle : Cette solution est simple à mettre à l'échelle.
 
 #### Cons :
